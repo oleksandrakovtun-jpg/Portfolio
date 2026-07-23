@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: white;
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: blur(6px) brightness(0.4);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                rgba(0,0,0,0.6),
+                rgba(0,0,0,0.85)
+            );
+            z-index: -1;
+        }
+
+        .title {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            width: 100%;
+            font-size: 36px;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background: rgba(20, 20, 30, 0.85);
+            padding: 35px;
+            border-radius: 20px;
+            width: 380px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 40px rgba(255, 105, 180, 0.3);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        textarea {
+            resize: none;
+            height: 90px;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .checkbox input {
+            margin-right: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff4ecd, #7b2ff7);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .media {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        video, audio {
+            width: 60%;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <video class="video-bg" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <h1 class="title">Sabrina Carpenter Booking</h1>
+
+    <div class="container">
+        <div class="form-box">
+
+            <h2>Booking Request</h2>
+
+            <form action="#" method="post">
+
+                <input type="text" name="name" placeholder="Ваше ім’я / Компанія" required>
+
+                <input type="email" name="email" placeholder="Email для зв'язку" required>
+
+                <select name="subject" required>
+                    <option value="">Тип запиту</option>
+                    <option>Запрос на концерт</option>
+                    <option>Коллаборация</option>
+                    <option>Пресса / интервью</option>
+                </select>
+
+                <textarea name="message" placeholder="Опишіть деталі заходу..." required></textarea>
+
+                <div class="checkbox">
+                    <input type="checkbox" required>
+                    <label>Я погоджуюсь на обробку даних</label>
+                </div>
+
+                <button type="submit">Відправити</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="media">
+
+        <h2>Live Performance</h2>
+
+        <video controls>
+            <source src="sabrina.mp4" type="video/mp4">
+        </video>
+
+        <h2>Music</h2>
+
+        <audio controls loop>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+</body>
+</html>
