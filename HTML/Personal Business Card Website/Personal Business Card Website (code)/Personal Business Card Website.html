@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Візитівка</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                rgb(20, 20, 20),
+                hsl(260, 40%, 20%)
+            );
+
+            font-family: Arial;
+        }
+
+        .card {
+            width: 350px;
+            padding: 25px;
+            border-radius: 20px;
+
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+
+            text-align: center;
+            color: white;
+
+            transition: 0.4s;
+            transform-origin: center;
+        }
+
+        .card:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #ff4d4d; 
+        }
+
+        .info {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .about {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: hsl(0, 0%, 80%);
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+
+            background: rgb(255, 77, 77);
+            color: white;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: hsl(0, 80%, 60%);
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+
+    <h1>Олександра Ковтун</h1>
+
+    <div class="info">📧 aleksandrakovtun86@gmail.com</div>
+    <div class="info">☎️ +380 95 529 1293</div>
+
+    <div class="about">
+        Я студентка, яка вивчає програмування. 
+        Люблю фільми, музику і просто кайфувати від атмосфери. 
+        У вільний час можу зависнути з серіалом, послухати улюблені треки 
+        або просто відпочити і нічого не робити. 
+        Також іноді люблю майструвати щось маленьке своїми руками
+    </div>
+
+    <button class="btn">Зв'язатися</button>
+
+</div>
+
+</body>
+</html>
